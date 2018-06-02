@@ -1,0 +1,29 @@
+extends: standard
+parser: babel-eslint
+
+parserOptions:
+  ecmaFeatures:
+    jsx: true
+
+rules:
+  curly: off
+  padded-blocks: off
+  no-trailing-spaces: off # Bcs of arrow functions in classes
+  'promise/param-names': off
+  # Prevent eslint complaining about React/JSX stuff
+  'react/jsx-uses-vars': 1
+  'react/jsx-uses-react': 1
+  indent:
+    - error
+    - 4
+
+globals:
+  # Testing
+  it: true
+  describe: true
+  expect: true
+
+plugins:
+  - react
+  - import
+  - node
